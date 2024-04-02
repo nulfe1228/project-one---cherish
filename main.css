@@ -1,0 +1,455 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;    
+}
+
+#main_header{
+    width: 100vw;
+    height: 860px;
+    overflow: hidden;
+}
+#main_header_box{
+    width: 100vw;
+    height: 800px;
+    /* border: 1px solid gray; */
+    background-image: url(/개인프로젝트/기록/images/library.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#main_header .slide_list{
+    width: fit-content;
+    height: 60px;
+    /* border: 2px solid salmon; */
+    background-color: rgb(197, 171, 146);
+    display: flex;
+    
+}
+
+#main_header .slide_list .slide_text{
+    width: max-content;
+    height: 60px;
+    font-size: x-large;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+
+    font-family: 'TTHakgyoansimJiugaeR';
+    
+}
+
+@font-face {
+    font-family: 'TTHakgyoansimMulgyeolB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.animation{
+    animation-name: infinite_slide;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes infinite_slide{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.wrapper {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo {
+    width: 7.5ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'TTHakgyoansimJiugaeR';
+    font-size: 5rem;
+}
+
+@font-face {
+    font-family: 'TTHakgyoansimJiugaeR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimJiugaeR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes typing {
+    from {
+    width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+    border-color: transparent
+    }
+}
+
+main .container1{
+    width: 100vw;
+    height: 550px;
+    background-color: #6D4022;
+    padding-left: 20px;
+}
+
+/* #wave_text{
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #005b96;
+    font-size: 2rem;
+    text-align: center;
+} */
+
+main .container1 .category_books{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+main .container1 .category_books img{
+    width: 18%;
+    margin-left: 1.5%;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+main .container1 .category_books img:hover{
+    transform: rotate(5deg);
+}
+
+
+
+/* diary modal */
+.modal1 {
+    width: 1400px;
+    height: 700px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border: 10px solid #DB634F;
+    text-align: center;
+}
+
+.modal1[open] {
+    -webkit-animation: show 0.5s ease normal;
+}
+
+.modal1::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal1[open]::backdrop {
+    -webkit-animation: show-backdrop 0.5s ease normal;
+}
+
+.modal1 > h3 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.modal1 > form > button {
+    background-color: #DB634F;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+}
+
+@keyframes show {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes show-backdrop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* calrendar modal */
+.modal2 {
+    width: 1400px;
+    height: 700px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border: 10px solid #82A2AF;
+    text-align: center;
+}
+
+.modal2[open] {
+    -webkit-animation: show 0.5s ease normal;
+}
+
+.modal2::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal2[open]::backdrop {
+    -webkit-animation: show-backdrop 0.5s ease normal;
+}
+
+.modal2 > h3 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.modal2 > form > button {
+    background-color: #82A2AF;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+}
+
+
+
+/* book modal */
+.modal3 {
+    width: 1400px;
+    height: 700px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border: 10px solid #D1986C;
+    text-align: center;
+}
+
+.modal3[open] {
+    -webkit-animation: show 0.5s ease normal;
+}
+
+.modal3::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal3[open]::backdrop {
+    -webkit-animation: show-backdrop 0.5s ease normal;
+}
+
+.modal3 > h3 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.modal3 > form > button {
+    background-color: #D1986C;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+}
+
+
+
+/* movie modal */
+.modal4 {
+    width: 1400px;
+    height: 700px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border: 10px solid #6A9452;
+    text-align: center;
+}
+
+.modal4[open] {
+    -webkit-animation: show 0.5s ease normal;
+}
+
+.modal4::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal4[open]::backdrop {
+    -webkit-animation: show-backdrop 0.5s ease normal;
+}
+
+.modal4 > h3 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.modal4 > form > button {
+    background-color: #6A9452;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+}
+
+
+
+/* recipe modal */
+.modal5 {
+    width: 1400px;
+    height: 700px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border: 10px solid #68574E;
+    text-align: center;
+}
+
+.modal5[open] {
+    -webkit-animation: show 0.5s ease normal;
+}
+
+.modal5::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal5[open]::backdrop {
+    -webkit-animation: show-backdrop 0.5s ease normal;
+}
+
+.modal5 > h3 {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.modal5 > form > button {
+    background-color: #68574E;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+}
+
+/* hr{
+    width: 98%;
+    border: 0px;
+    border-top: 3px dashed #005b96;
+    
+} */
+
+.container2{
+    
+    width: 100vw;
+    height: 150vh;
+    background: #FFF4DE;
+    position: relative;
+    padding-left: 1.5%;
+    padding-top: 100px;
+    
+}
+
+#category_btn{
+    margin-left: 0.5%;
+}
+
+#category_btn .cate_btn{
+    width: fit-content;
+    height: 40px;
+    border: 1px solid #fff;
+    text-align: center;
+    float: left;
+    border-radius: 10px 10px 0 0;
+    line-height: 40px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: 'TTHakgyoansimJiugaeR';
+    font-size: 1.2rem;
+    padding: 0 15px;
+}
+
+#category_btn .cate_btn:hover{
+    height: 40px;
+    background-color: rgb(255, 197, 37);
+    color: white;
+}
+
+.container2 .list_box{
+    box-sizing: border-box;
+    width: 25%;
+    height: 700px;
+    border: 3px solid rgb(209, 209, 209);
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 140px;
+    padding: 20px 25px 20px 25px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
+}
+
+.container2 .list_box h2{
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color:rgb(255, 197, 37);
+}
+
+.container2 .cal_box{
+    box-sizing: border-box;
+    width: 68%;
+    height: 1070px;
+    border:  3px solid rgb(209, 209, 209);
+    position: absolute;
+    border-radius: 10px;
+    top: 140px;
+    left: 28%;
+    padding-top: 20px;
+}
+
