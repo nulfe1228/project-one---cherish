@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TTHakgyoansimJiugaeR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimJiugaeR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#c_join{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/002.jpg);
+    overflow: hidden;
+}
+
+#c_join h1{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'TTHakgyoansimJiugaeR';
+    font-weight: lighter;
+}
+
+#join_box{
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
