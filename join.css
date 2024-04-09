@@ -7,7 +7,7 @@ body{
 @font-face {
     font-family: 'TTHakgyoansimJiugaeR';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimJiugaeR.woff2') format('woff2');
-    font-weight: normal;
+    
     font-style: normal;
 }
 
@@ -26,7 +26,7 @@ body{
 }
 
 #join_box{
-    width: 40%;
+    width: 20%;
     height: 80%;
     background-color: white;
     border-radius: 15px;
@@ -34,4 +34,44 @@ body{
     top: 60%;
     left: 50%;
     transform: translate(-50%, -60%);
+    padding-left: 50px;
+    padding-top: 20px;
+    font-family: 'TTHakgyoansimJiugaeR';
+    font-weight: lighter;
+}
+#join_box h4{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
+#join_box .wide_in{
+    width: 70%;
+    height: 20px;
+}
+#join_box .join_btn{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%);
+    width: 30%;
+    height: 40px;
+    border: none;
+    background-color: #ffde64;
+    border-radius: 10px;
+    font-family: 'TTHakgyoansimJiugaeR';
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+#join_box .check_btn{
+    width: 80px;
+    height: 25px;
+    border: none;
+    background-color: #ffde64;
+    border-radius: 50px;
+    font-family: 'TTHakgyoansimJiugaeR';
+    font-weight: lighter;
+    cursor: pointer;
 }
