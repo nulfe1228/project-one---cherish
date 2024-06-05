@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/개인프로젝트/기록/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>📚Cherish-MEMO📚</title>
 
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    
     <script>
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -29,6 +29,9 @@
     <header>
         <div id="main_header">
             <div id="main_header_box">
+                <button class="log_button">
+                    <a href="./login.html">로그인</a>
+                </button>
                 <div class="head_logo"></div>
                 <div class="wrapper">
                     <div class="typing-demo">
@@ -62,10 +65,8 @@
         <div id="#modal_diary">
             <dialog class="modal1">
                 <h3>일기</h3>
-                <form method="dialog" >
-                    <hr>
-                    <!-- <input type="file" id="profile" name="profile" accept="image/png, image/jpeg, image/jpg">
-                    <input type="text" style="width: 65%; height: 500px; "> -->
+                <form method="post" >
+                    
                     <button class="closs_btn">Close</button>
                 </form>
             </dialog>
@@ -104,38 +105,91 @@
         </div>
         
         <div class="container2">
-            <div id="category_btn">
-                <div class="cate_btn">전체</div>
-                <div class="cate_btn">일기</div>
-                <div class="cate_btn">공연/전시</div>
-                <div class="cate_btn">책</div>
-                <div class="cate_btn">영화</div>
-                <div class="cate_btn">레시피</div>
-            </div>
-            <div class="list_box">
-                <p>2024.03.27(수)</p>
-                <h2>우울한 날...</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque molestiae ducimus deserunt similique incidunt quam nulla, pariatur aspernatur fugiat accusantium! Veniam eos commodi laborum doloribus sint illo saepe cumque.
-                Eveniet voluptatibus animi eos architecto obcaecati amet est adipisci. Molestiae commodi nam tempora veniam placeat vel dignissimos laborum, quibusdam, saepe odio veritatis porro aut beatae, expedita deserunt! Illo, cum officiis!
-                Et sintum exercitationem unt officia architecto dolorum laudantium ipsam debitis optio, nisi earum dolore harum amet voluptatibus, voluptate suscipit? Illo, cupiditate ipsa.
-                A esse culpa vero ea dolore molestias incidunt iste odio? Rerum modi at vel reiciendis incidunt ratione eligendi repellat voluptatem? Ipsum nesciunt sapiente earum aut nemo accusantium culpa et sunt!
+            <div class="cal-box">
+                <div class='rap'>
+                    <div class="header">
+                       <div class="btn prevDay"></div>
+                      <h2 class='dateTitle'></h2>
+                      <div class="btn nextDay"></div>
+                    </div>
+                    
+                    <div class="grid dateHead">
+                      <div>일</div>
+                      <div>월</div>
+                      <div>화</div>
+                      <div>수</div>
+                      <div>목</div>
+                      <div>금</div>
+                      <div>토</div>
+                    </div>
                 
-                </p>
-                <br><br><hr><br>
-                <p>2024.03.26(화)</p>
-                <h2>비가 주룩주룩 내리던 날</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, cumque molestiae ducimus deserunt similique incidunt quam nulla, pariatur aspernatur fugiat accusantium! Veniam eos commodi laborum doloribus sint illo saepe cumque.
-                    Eveniet voluptatibus animi eos architecto obcaecati amet est adipisci. Molestiae commodi nam tempora veniam placeat vel dignissimos laborum, quibusdam, saepe odio veritatis porro aut beatae, expedita deserunt! Illo, cum officiis!
-                    Et sint laborum temporibus voluptates sit, voluptas sapiente magni tempore tempora impedit ratione quibusdam cum fugit! Vero quisquam est, praesentium ut quasi alias iure sed debitis dolore voluptas minus tempore!
-                    Facere laborum et, repellendus dolorum quo, atque ipsa reprehenderit, voluptate deserunt beatae nesciunt blanditiis odio voluptates veniam deleniti. Expedita, consectetur provident. Tempora libero soluta dolor culpa aliquid aliquam quo quod.
-                    Impedit optio molestias labore, nostrum cupiditate facere excepturi? Placeat quibusdam dolor voluptatem eaque, nam corrupti totam vitae voluptatibus laudantium atque fugiat? Totam commodi iure veniam quas iste id obcaecati quasi.
-                    !</p>
+                    <div class="grid dateBoard"></div>
+                  </div>
+            </div>
+            <div class="list-box">
+                <div class="div1">
+                    <div class="date-list">2024.06.11</div>
+                    <hr>
+                    <div class="date-list">2024.06.10</div>
+                    <hr>
+                    <div class="date-list">2024.06.08</div>
+                    <hr>
+                    <div class="date-list">2024.06.03</div>
+                    <hr>
+                    <div class="date-list">2024.06.01</div>
+                    <hr>
+                    <div class="date-list">2024.05.30</div>
+                    <hr>
+                    <div class="date-list">2024.05.29</div>
+                    <hr>
+                    <div class="date-list">2024.05.28</div>
+                    <hr>
+                    <div class="date-list">2024.05.27</div>
+                    <hr>
+                    <div class="date-list">2024.05.25</div>
+                    <hr>
+                    <div class="date-list">2024.05.21</div>
+
+                </div>
+                <div class="div2">
+                    <h1 class="d-tit">그날, 나의 일기장</h1>
+                    <div class="d-cont">
+                        첫 번째 줄만 한글로 적어봅니다. 이곳은 일기를 쓰고나서 지금까지 썼던 일기를 모아볼 수 있는 리스트 박스입니다.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolore velit et, dolor magni error, consequatur doloribus fugiat modi iste aliquam quis eius est ratione cum vitae similique inventore alias.
+                        Deleniti aut hic reprehenderit. Ipsa quibusdam minima sapiente vitae quae incidunt officia, hic cumque earum quas laboriosam dolorum, magnam suscipit illum nobis praesentium eveniet rem, autem nemo mollitia natus. Beatae!
+                        Rem, quis suscipit. Ducimus omnis perferendis ullam temporibus quos nesciunt odit obcaecati aspernatur in, maiores nihil vel nam. Aut laudantium dolores in expedita facilis, dicta itaque consequuntur quibusdam perferendis reprehenderit?
+                        Doloribus in suscipit aperiam delectus nobis iure architecto dolorem rerum, nisi corrupti atque eaque nulla animi debitis ratione maxime reiciendis cum quod reprehenderit totam molestiae praesentium sit. Impedit, officiis molestiae.
+                        Mollitia repellendus, cupiditate similique quia, nisi libero repudiandae impedit ea numquam iure cumque consequatur molestias labore dicta expedita. Officia iste excepturi ratione odit est veniam aspernatur quidem sapiente itaque sit.
+                        Provident, fugit quam necessitatibus atque ab minus cum inventore illo dolores. Adipisci officia, autem ullam nihil debitis distinctio accusamus cumque et earum repellat, nulla iusto tempora reprehenderit beatae eveniet natus!
+                        Error sint, voluptatibus a dicta at eveniet sunt porro ut nobis minima quisquam laboriosam commodi recusandae saepe aut eligendi soluta quaerat maiores cumque delectus blanditiis harum? Nemo ducimus quo nisi.
+                        Amet accusantium possimus commodi explicabo, nam neque culpa soluta dolore harum quibusdam optio ipsa, et, ducimus nostrum ad eum. Itaque eveniet ab non eius quod consequuntur at enim veritatis explicabo.
+                        Mollitia, maiores eum consequatur voluptatum nulla iusto porro reiciendis temporibus quis impedit voluptatem inventore ipsam deserunt nobis doloribus eos dolores accusantium aliquid molestiae, praesentium cupiditate consectetur ducimus! Consequatur, corporis tempora.
+                        Nesciunt, totam id? Commodi quam libero natus? Consequuntur explicabo quis culpa perspiciatis quidem velit omnis, delectus doloribus repellat cupiditate, asperiores eius. Provident, velit officia? Vero nihil fuga voluptate iure esse?
+                        Alias vel explicabo hic tenetur magni, quam error esse corrupti quae consequuntur odit similique praesentium, corporis porro saepe nostrum ipsam laborum sed minima obcaecati soluta at. Magnam fugit cum ex!
+                        Incidunt libero, aliquid ipsum quidem accusamus maxime. Natus quisquam eos laudantium necessitatibus consequatur eius in amet? Ullam saepe, sit odit culpa doloremque, maxime error ex ea veniam minima quidem ratione.
+                        Recusandae placeat veritatis, eaque error repellat, omnis quos voluptatum quisquam dolorum eligendi animi soluta consequatur quasi voluptas. Expedita quos modi voluptates! Dolorem ad voluptates veritatis corporis, itaque a adipisci deleniti.
+                        Maiores laudantium error autem tenetur. Odit reiciendis quaerat iste illum cum voluptates, dolorum, blanditiis accusantium quo dolore eius animi dolor alias aut nam id esse ipsa. Tempore iste accusantium soluta.
+                        Aliquid dolor saepe alias facilis soluta impedit? Animi minima autem eius recusandae exercitationem? Harum tempore vitae molestias, recusandae officiis consequatur sint odio, eaque possimus, mollitia necessitatibus amet magnam excepturi enim.
+                        Maxime ducimus saepe omnis sit eveniet sapiente, facere non dicta aspernatur velit blanditiis, praesentium nulla consequatur, beatae est delectus doloribus illo! Officiis fugit, eaque unde eum quam reiciendis alias voluptatibus?
+                        Nisi aliquid aliquam cumque, optio voluptatibus sed magnam, praesentium possimus quos odit quisquam officia corporis soluta. Nam aliquam corporis et quaerat incidunt, quisquam totam, vel praesentium in eligendi, error quas!
+                        Quae itaque ipsa ratione, sint similique earum? Adipisci totam facilis repudiandae error minima, ea odio dolores repellendus. Corrupti voluptate nostrum eos repellendus, iure labore modi ab magni odio, in qui?
+                        Mollitia error quidem, ut laborum quo consectetur eum rem praesentium totam exercitationem tempore. Quibusdam, maxime neque, fuga ipsam asperiores sapiente magnam, officia quisquam assumenda minima enim! Ipsum harum quod fugiat.
+                        Aut, repellendus. Modi esse repudiandae accusantium, eum sed officia soluta quos incidunt culpa! Corrupti assumenda neque officiis dicta iure deserunt, veniam molestiae quae magnam nihil, sunt, placeat nam culpa voluptatum.
+                        Est ipsam nulla hic vel dolores deleniti molestias, modi possimus et provident, facere saepe libero, laudantium mollitia? Repellendus tempore numquam veniam fuga, odio ab iure repellat nobis eos natus distinctio.
+                        Ut ea rerum enim numquam porro? Error nam dolore facilis cum illum, quae nisi quidem rerum, aperiam, voluptatibus aliquid perspiciatis animi molestiae ipsam unde consequuntur dignissimos. Architecto quia aliquam quos?
+                        Officia esse, enim repellat illum error fugiat temporibus? Nihil eum vitae odit cupiditate accusantium voluptatibus maiores animi dicta, laborum nemo praesentium, natus, aspernatur officiis eveniet et obcaecati porro! Officia, ipsum?
+                        Consequuntur hic veritatis quidem labore ullam dolor harum quo, quis quia rem commodi officiis in sequi doloribus, quibusdam blanditiis obcaecati soluta neque eligendi distinctio aliquam voluptatibus sint! Id, similique asperiores.
+                        Mollitia corporis consequuntur voluptates adipisci, accusantium expedita fuga recusandae et illum voluptatem nihil tempore neque autem rem aspernatur, aut ab fugit, excepturi voluptate laborum reprehenderit omnis provident porro eos? Debitis.
+                        Facere pariatur animi accusantium culpa voluptatum, at natus possimus aliquam autem magnam dicta suscipit doloribus cumque, earum repudiandae quam adipisci nam ipsum obcaecati maxime dolorum nemo commodi! Cupiditate, beatae modi!
+                        Officiis veniam, odit, cum minus quisquam modi dolores voluptate tenetur vel ducimus neque non debitis ab quo cupiditate atque, facilis laboriosam ipsa iure quod facere dolorem veritatis aspernatur. Eos, minima!
+                        Obcaecati sapiente perferendis quas quia totam ipsum quasi ducimus repellendus perspiciatis fugit assumenda provident, maiores voluptate. Iure quae quasi unde dolor suscipit enim provident natus esse magni, cum aliquid dolorem.
+                        Id voluptate incidunt nulla quis quod qui cumque illum voluptatem, error fugit aliquid placeat quibusdam excepturi magnam quas labore officia et quidem illo nihil? Exercitationem quo nostrum aperiam temporibus beatae?
+                        Dolorem, neque. Consequatur nisi dolore tempora officia, ut molestias, libero vero suscipit minus corporis nam consectetur nobis officiis temporibus iusto aliquam voluptatibus perferendis quam rem repudiandae in porro deleniti. Facilis.
+                    </div>
+                </div>
             </div>
             
-            <div class="cal_box">
-                <div id='calendar'></div>
-            </div>
+            
             
         </div>
     </main>
